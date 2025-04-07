@@ -24,13 +24,13 @@ export default function Hero() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-block bg-accent border border-transparent rounded-md py-3 px-8 font-medium text-white hover:bg-opacity-90 transition-all duration-300 hover:shadow-lg hover:shadow-accent/30 text-center"
               >
                 Get in Touch
               </a>
               <a
-                href="#services"
+                href="/services"
                 className="inline-block bg-white/20 backdrop-blur-sm border border-white/30 rounded-md py-3 px-8 font-medium text-white hover:bg-white/30 transition-all duration-300 text-center"
               >
                 Our Services
@@ -39,10 +39,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Company logo - clean version */}
-        <div className="lg:ml-8 flex justify-center">
+        {/* Company logo - properly centered */}
+        <div className="w-full flex justify-center lg:w-auto lg:flex-1 lg:justify-center">
           <img
-            src="/assets/logo.png"
+            src="/assets/newlogo.png"
             alt="SM Traffic Solutions"
             className="h-48 w-auto object-contain hover:scale-105 transition-transform duration-300 filter hover:drop-shadow-[0_0_12px_rgba(245,158,11,0.4)]"
           />
