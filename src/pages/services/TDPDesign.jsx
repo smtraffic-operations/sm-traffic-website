@@ -1,8 +1,10 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
+import Seo from '../../components/Seo' 
+import tdpImage from '/assets/images/services/tdp-design/blueprint.avif' 
 
 const serviceData = {
   title: "Traffic Diversion Plan (TDP) Design",
-  mainImage: "/assets/images/services/tdp-design/blueprint.jpg", // Add appropriate image
+  mainImage: "/assets/images/services/tdp-design/sample-plan2.avif", 
   content: (
     <div className="glass-card-enhanced rounded-xl p-6">
       <h2 className="text-2xl font-bold text-white mb-4">Compliant Traffic Planning</h2>
@@ -24,11 +26,21 @@ const serviceData = {
     { value: "24h", label: "Emergency Turnaround" }
   ],
   gallery: [
-    "/assets/images/services/tdp-design/sample-plan.jpg", // Add appropriate images
-    "/assets/images/services/tdp-design/3d-model.png"
+    "/assets/images/services/tdp-design/sample-plan.jpg", 
+    "/assets/images/services/tdp-design/blueprint.avif"
   ]
 }
 
 export default function TDPDesign() {
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW WRAPPER */}
+      <Seo 
+        title="Traffic Diversion Plan (TDP) Design in Qatar | 100% Approval Rate"
+        description="Ashghal-approved TDP designs with 3D modeling. 200+ projects completed with 24-hour emergency service."
+        path="/services/tdp-design"
+        image={tdpImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> 
+    </>
+  )
 }

@@ -1,4 +1,7 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
+import Seo from '../../components/Seo' // NEW
+import trafficImage from '/assets/images/services/traffic-management/team-onsite.jpg' // NEW
+
 
 const serviceData = {
   title: "Traffic Management Team Services",
@@ -48,5 +51,15 @@ const serviceData = {
 }
 
 export default function TrafficManagement() {
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW WRAPPER */}
+      <Seo 
+        title="Certified Traffic Management Teams in Qatar | 24/7 Availability"
+        description="500+ QCDD-certified personnel for construction and event traffic control. Full compliance with WZTMG and QTCM standards."
+        path="/services/traffic-management"
+        image={trafficImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> {/* UNCHANGED */}
+    </>
+  )
 }

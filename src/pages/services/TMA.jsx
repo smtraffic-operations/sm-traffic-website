@@ -1,5 +1,7 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
 import { FiShield, FiUsers, FiCheckCircle } from 'react-icons/fi'
+import Seo from '../../components/Seo' // NEW IMPORT
+import tmaImage from '/assets/images/services/tma/onsite-consultation.jpg' // NEW IMPORT
 
 const serviceData = {
   title: "Traffic Management Advice & Consultation",
@@ -63,6 +65,17 @@ const serviceData = {
   ]
 }
 
+
 export default function TMA() {
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW FRAGMENT WRAPPER */}
+      <Seo 
+        title="Traffic Management Advisory (TMA) Services in Qatar | SM Traffic Qatar"
+        description="Ashghal & MOT-compliant traffic planning for construction zones. Certified STMS supervisors with 8+ years experience in Qatar."
+        path="/services/tma"
+        image={tmaImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> {/* EXISTING COMPONENT */}
+    </>
+  )
 }

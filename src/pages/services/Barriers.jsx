@@ -1,5 +1,7 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
 import { FiShield, FiZap, FiBox } from 'react-icons/fi'
+import Seo from '../../components/Seo' // NEW
+import barrierImage from '/assets/images/services/barriers/barrier.jpg' // NEW
 
 export default function BarriersPage() {
   const serviceData = {
@@ -75,5 +77,15 @@ export default function BarriersPage() {
     ]
   }
 
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW WRAPPER */}
+      <Seo 
+        title="WZTMG-Compliant Barrier Solutions in Qatar | MOI Approved"
+        description="Plastic, concrete, and electronic barriers for construction zones. Quick deployment with anti-climb designs."
+        path="/services/barriers"
+        image={barrierImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> {/* UNCHANGED */}
+    </>
+  )
 }

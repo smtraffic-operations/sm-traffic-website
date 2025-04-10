@@ -1,4 +1,6 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
+import Seo from '../../components/Seo' // NEW
+import signageImage from '/assets/images/services/products/road-signs.jpg' // NEW
 
 const serviceData = {
   title: "Traffic Signage Solutions",
@@ -29,6 +31,17 @@ const serviceData = {
   ]
 }
 
+
 export default function TrafficSignage() {
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW WRAPPER */}
+      <Seo 
+        title="MUTCD-Compliant Traffic Signs in Qatar | Bilingual Arabic/English"
+        description="5000+ retroreflective signs installed with 10-year lifespan. 48-hour replacement guarantee."
+        path="/services/traffic-signage"
+        image={signageImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> {/* UNCHANGED */}
+    </>
+  )
 }

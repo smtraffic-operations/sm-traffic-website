@@ -1,5 +1,8 @@
 import ServiceDetailLayout from '@/components/ServiceDetailLayout'
 import { FiCheckCircle, FiAlertTriangle, FiFileText } from 'react-icons/fi'
+import Seo from '../../components/Seo' // NEW
+import safetyImage from '/assets/images/services/safety-audit/safety-gear.jpg' // NEW
+
 
 export default function SafetyAuditPage() {
   const serviceData = {
@@ -56,5 +59,15 @@ export default function SafetyAuditPage() {
     ]
   }
 
-  return <ServiceDetailLayout service={serviceData} />
+  return (
+    <> {/* NEW WRAPPER */}
+      <Seo 
+        title="Road Safety Audits in Qatar | Ashghal-Approved Team"
+        description="ISO 39001 compliant safety audits with digital reporting. 500+ audits completed across Qatar with 3-day turnaround."
+        path="/services/safety-audit"
+        image={safetyImage}
+      />
+      <ServiceDetailLayout service={serviceData} /> 
+    </>
+  )
 }
