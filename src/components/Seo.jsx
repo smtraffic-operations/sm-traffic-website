@@ -1,47 +1,51 @@
-import { Helmet } from 'react-helmet-async'
-import PropTypes from 'prop-types'
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 export default function Seo({ 
-  title, 
-  description, 
-  path, 
-  image = '/assets/logo.png',
-  type = 'website' 
+  title = 'SM Traffic Qatar', 
+  description = 'Professional traffic management solutions',
+  path = '',
+  image = '/assets/logo.png'
 }) {
-  const fullUrl = `https://www.smtrafficqatar.com${path || ''}`
-  const fullImageUrl = `https://www.smtrafficqatar.com${image}`
-  
-  return (
-    <Helmet>
-      {/* Primary Meta Tags */}
-      <title>{title} | SM Traffic Qatar</title>
-      <meta name="title" content={title} />
-      <meta name="description" content={description} />
+  useEffect(() => {
+    document.title = title;
+    
+    // Helper to update/create meta tags
+    const updateTag = (name, content, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let tag = document.querySelector(`meta[${attr}="${name}"]`);
       
-      {/* OpenGraph */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={fullUrl} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullImageUrl} />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={fullUrl} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={fullImageUrl} />
-      
-      {/* Canonical */}
-      <link rel="canonical" href={fullUrl} />
-    </Helmet>
-  )
+      if (!tag) {
+        tag = document.createElement('meta');
+        tag.setAttribute(attr, name);
+        document.head.appendChild(tag);
+      }
+      tag.content = content;
+    };
+
+    // Standard meta tags
+    updateTag('description', description);
+    
+    // OpenGraph
+    updateTag('og:title', title, true);
+    updateTag('og:description', description, true);
+    updateTag('og:image', image, true);
+    updateTag('og:url', `https://www.smtrafficqatar.com${path}`, true);
+    updateTag('og:type', 'website', true);
+    
+    // Twitter
+    updateTag('twitter:card', 'summary_large_image');
+    updateTag('twitter:title', title);
+    updateTag('twitter:description', description);
+    updateTag('twitter:image', image);
+  }, [title, description, path, image]);
+
+  return null; // No DOM output needed
 }
 
 Seo.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  description: PropTypes.string,
   path: PropTypes.string,
-  image: PropTypes.string,
-  type: PropTypes.string
-}
+  image: PropTypes.string
+};
