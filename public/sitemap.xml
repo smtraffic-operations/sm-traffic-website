@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage (Highest priority) -->
+  <!-- Homepage -->
   <url>
     <loc>https://www.smtrafficqatar.com/</loc>
     <lastmod>2024-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
+
   <!-- Key Pages -->
   <url>
     <loc>https://www.smtrafficqatar.com/services</loc>
@@ -18,32 +17,66 @@
   <url>
     <loc>https://www.smtrafficqatar.com/about</loc>
     <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.smtrafficqatar.com/products</loc>
     <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
+
   <!-- Service Pages -->
   <url>
     <loc>https://www.smtrafficqatar.com/services/traffic-management</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smtrafficqatar.com/services/road-marking</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smtrafficqatar.com/services/tma</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.smtrafficqatar.com/services/safety-audit</loc>
-  </url>
-  <url>
-    <loc>https://www.smtrafficqatar.com/services/barriers</loc>
+    <loc>https://www.smtrafficqatar.com/services/tdp-design</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.smtrafficqatar.com/services/traffic-signage</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-  <!-- Add ALL other important URLs -->
+  <url>
+    <loc>https://www.smtrafficqatar.com/services/safety-audit</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.smtrafficqatar.com/services/barriers</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Include ALL other service pages with the same structure -->
+
+  <!-- Contact -->
   <url>
     <loc>https://www.smtrafficqatar.com/contact</loc>
+    <lastmod>2024-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
