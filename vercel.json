@@ -19,31 +19,41 @@
       }
     },
     {
-      "src": "/assets/(.*)",
-      "headers": { 
-        "Cache-Control": "public, max-age=31536000, immutable" 
+      "src": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml"
       }
     },
     {
-      "src": "/sitemap.xml",
-      "headers": { 
-        "Content-Type": "application/xml" 
+      "src": "/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain"
       }
     },
+    
+    {
+      "src": "/assets/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    
+    {
+      "src": "/(.*\\.(ico|svg|png|jpg|jpeg|webp|json|txt))",
+      "headers": {
+        "Cache-Control": "public, max-age=31536000, immutable"
+      }
+    },
+    
     {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "headers": {
+        "Cache-Control": "no-cache, no-store, must-revalidate"
+      }
     }
   ],
-  "headers": [
-    {
-      "source": "/.+\\.(ico|svg|png|webp)$",
-      "headers": [
-        { 
-          "key": "Cache-Control", 
-          "value": "public, max-age=31536000, immutable" 
-        }
-      ]
-    }
-  ]
+  "headers": [],
+  "rewrites": [],
+  "redirects": []
 }
