@@ -18,5 +18,8 @@ export default defineConfig({
   },
   optimizeDeps: {
     include: ['react-head-management'] 
+  },
+  build: {
+    assetsInlineLimit: 0, 
   }
 })
