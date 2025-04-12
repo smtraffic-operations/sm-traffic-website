@@ -22,7 +22,7 @@
   ],
   "headers": [
     {
-      "source": "/sitemap.xml",
+      "source": "sm-traffic-website/public/Sitemap.xml",
       "headers": [{ "key": "Content-Type", "value": "application/xml" }]
     }
   ]
